@@ -1,0 +1,41 @@
+
+@import 'config';
+@import 'first-level';
+@import 'second-level';
+@import 'third-level';
+@import 'fourth-level';
+.desktop{
+    .#{$prefix}-nav-menu{
+        a{
+            font-weight: $font_semi_bold;
+        }
+    }
+    
+}
+
+.desktop ul{
+    @extend %reset-ul;
+}
+.desktop .#{$prefix}-nav-menu li.down-arrow>a{
+    padding-right: 30px;
+}
+.desktop .down-arrow>a:after,
+.desktop .right-arrow>a:after{
+    display: block;
+    position: absolute;
+    @extend %ionicons;
+    font-size: 16px;
+    color: $color_primary;
+}
+.desktop .down-arrow>a:after{
+    content: '\f280';
+    right: 10px;
+    top: 2px;
+
+}
+.desktop .right-arrow>a:after{
+    content: '\f282';
+    left: 10px;
+    top: 50%;
+    @include transform(translateY(-50%));
+}

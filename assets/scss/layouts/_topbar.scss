@@ -1,0 +1,32 @@
+.#{$prefix}-topbar-section{
+    color: $primary_bg_text_color;
+    padding-bottom: 40px;
+    a{
+        color: $primary_bg_text_color;
+    }
+    .#{$prefix}-site-feature-list{
+        padding: 5px 0 15px;
+        margin-left: -15px;
+        margin-right: -15px;
+        justify-content: center;
+        align-items: center;
+       .#{$prefix}-site-feature{
+           display: flex;
+           padding: 10px 15px 0;
+       }
+        a,
+        span,
+        .#{$prefix}-desc,
+        .#{$prefix}-caption,
+        .#{$prefix}-icon-section{
+            display: inline-block;
+        }
+        .#{$prefix}-caption{
+            margin: 0;
+        }
+        .#{$prefix}-desc{
+            padding-left: 15px;
+        }
+        
+    }
+}	

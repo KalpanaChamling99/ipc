@@ -1,0 +1,35 @@
+$nav-height: 80px;
+$nav-second-level-height: 40px;
+%first-level{
+    padding: 0 15px;
+    height: $nav-height;
+    line-height: $nav-height;
+    overflow: hidden;
+}
+
+%second-level{
+    position: absolute;
+    top: 110%;
+    right: 0;
+    width: 220px;
+    background-color: $color_shade;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    @include transition(all,1s,ease);
+    z-index: 3;
+    a{
+        display: block;
+        padding: 10px 15px;
+        color: $text_color;
+        text-transform: capitalize;
+        width: 100%;
+        position: relative;
+        text-align: right;
+        &:visited{
+            color: $text_color;
+        }
+       
+    }
+}

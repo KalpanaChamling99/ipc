@@ -1,0 +1,55 @@
+  
+
+ .#{$prefix}-banner-section{
+    height: 400px;
+    display: flex;
+    align-items: center;
+    color: rgba($color_white,0.8);
+    position: relative;
+    padding-top: 30px;
+    overflow: hidden;
+    @include media(sm){
+        height: 500px;
+    }
+    .#{$prefix}-image-section{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        @include animation( kenburns-top 20s ease-out infinite both );
+    }
+    .#{$prefix}-wrapper{
+        z-index: 2;
+    }
+    p,
+    .#{$prefix}-section-title{
+        margin-bottom: 15px;
+        margin-top: 0;
+
+    }
+    p{
+        @include line-limit(3);
+        font-size: 18px;
+    }
+    .#{$prefix}-section-title{
+        @include line-limit(2);
+        font-size: 50px;
+        line-height: 1;
+    }
+}
+
+.ipc-inner-banner{
+    height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    color: $color_white;
+    .page-title{
+        margin: 0;
+        opacity: 0.9;
+    }
+}
+ 

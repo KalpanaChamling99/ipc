@@ -1,0 +1,34 @@
+.ipc-pagination{
+    flex: 0 0 100%;
+    max-width: 100%;
+    .nav-links{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .page-numbers{
+            display: inline-block;
+            @include border-top();
+            @include border-left();
+            @include border-bottom();
+            padding: 3px 15px; 
+            background-color: $color_white;
+            border-color: #eaeff2;
+           
+            cursor: pointer;
+            @include transition();
+            &:last-child{
+                @include border-right();
+            }
+            &.current{
+                background-color: $color_primary;
+                color: $primary_bg_text_color;
+                border-color: $color_primary; 
+            }
+            &:hover{
+                background-color: $color_black;
+                color: $color_white;
+                border-color: $color_black;
+            }
+        }
+    }
+}

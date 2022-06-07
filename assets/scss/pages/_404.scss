@@ -1,0 +1,18 @@
+.#{$prefix}-not-found{
+    text-align: center;
+    color: $color_black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    .#{$prefix}-error-title{
+        font-size: 30px;
+        line-height: 1;
+        margin: 0;
+    }
+    .ipc-btn-section{
+        margin-top: 30px;
+    }
+}

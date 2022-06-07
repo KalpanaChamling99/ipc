@@ -1,0 +1,61 @@
+
+.ipc-menu-icon {
+    display: block;
+    width: 35px;
+    margin: auto;
+    .ipc-line {
+        display: block;
+        position: relative;
+        height: 4px;
+        background-color: $color_primary;
+        margin-bottom: 5px;
+        width: 100%;
+        @include transition();
+        &:before{
+            content: "";
+            display: block;
+            width: 3px;
+            height: 4px;
+            background-color: white;
+            position: absolute;
+            top: 0;
+            @include transition();
+        }
+    }
+    .ipc-line-1{
+        &:before{
+            left: 4px;
+
+        }
+    }
+    .ipc-line-2 {
+        &:before{
+            left: 50%;
+            @include transform(translateX(-50%));
+        }
+    }
+    .ipc-line-3{
+        &:before{
+            right: 4px;
+        }
+    }
+}
+button{
+    &:hover{
+        .ipc-menu-icon{
+            .ipc-line-1{
+                &:before{
+                    left: initial;
+                    right: 4px;
+                }
+            }
+            .ipc-line-3{
+                &:before{
+                    left: 4px;
+                    right: initial;
+                }
+            }
+        }
+    }
+}
+ 

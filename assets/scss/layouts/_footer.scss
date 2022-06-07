@@ -1,0 +1,23 @@
+.#{$prefix}-site-footer{
+    text-align: center;
+    padding: 15px 0;
+    color: $primary_bg_text_color;
+    p{
+        margin: 0;
+    }
+    a{
+        display: inline-block;
+        @include border-bottom(2px,solid);
+        border-color: $primary_bg_text_color ;
+        margin-left: 5px;
+        color: $primary_bg_text_color;
+        &:visited{
+            color: $primary_bg_text_color;
+        }
+        &:hover{
+            opacity: 0.8;
+        }
+
+        
+    }
+}

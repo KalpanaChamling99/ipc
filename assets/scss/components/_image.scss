@@ -1,0 +1,100 @@
+
+.#{$prefix}-image-200{
+    height: 200px;
+}
+
+.#{$prefix}-image-400{
+    height: 400px;
+}
+.#{$prefix}-post{
+    .#{$prefix}-image-section{
+        position: relative;
+        >a{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 2;
+        }
+        .#{$prefix}-image{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            
+        }
+        .ipc-icon{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%,-50%));
+            z-index: 1;
+            width: 60px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 10px;
+            background-color: rgba($color_black,0.7);
+            color: $color_white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+           
+            i{
+                font-size: 20px;
+            }
+
+        }
+    }
+}
+.#{$prefix}-image-hover-effect{
+    overflow: hidden;
+    &:after{
+        position: absolute;
+        top: 0;
+        left: -75%;
+        z-index: 2;
+        display: block;
+        content: '';
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(left, rgba($color_white,0) 0%, rgba($color_light_gray,0.63) 100%);
+        background: -webkit-linear-gradient(left, rgba($color_white,0) 0%, rgba($color_light_gray,0.63) 100%);
+        background: -moz-linear-gradient(left, rgba($color_white,0) 0%, rgba($color_light_gray,0.63) 100%);
+        @include transform(skewX(-25deg));
+    }
+    &:hover{
+        &:after{
+            @include animation(hover 1s); 
+        }
+        &.#{$prefix}-overlay{
+            &:before{
+                content: none;
+            }
+        }
+        .ipc-icon{
+            background-color: #FF0000;
+        }
+    }
+
+}
+.#{$prefix}-image-zoom-in-effect{
+    overflow: hidden;
+    .#{$prefix}-image{
+        @include transition(transform,0.3s,linear);
+        @include backface();  
+    }
+    &:hover{
+        .#{$prefix}-image{
+            @include transform(scale(1.1,1.1));
+        }
+        &.#{$prefix}-overlay{
+            &:before{
+                content:none;
+            }
+        }
+
+    }
+}

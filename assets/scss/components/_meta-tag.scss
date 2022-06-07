@@ -1,0 +1,18 @@
+.ipc-meta-tag{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    span{
+        display: inline-block;
+    }
+    .ipc-meta-item{
+        padding-right: 15px;
+        margin-top: 10px;
+        span{
+            padding-right: 5px;
+        }
+    }
+    img{
+        border-radius: 100%;
+    }
+}

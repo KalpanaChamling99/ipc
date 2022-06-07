@@ -1,0 +1,71 @@
+.container-fluid,
+.#{$prefix}-container{
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+   
+}
+.#{$prefix}-container{
+    @include media(xs){
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @include media(largeScreen){
+        max-width: 1250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.clearfix{
+    @extend %clearfix;
+}
+.#{$prefix}-d-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.#{$prefix}-w-100{
+    display: block;
+    width: 100%;
+}
+.#{$prefix}-row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.#{$prefix}-col{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.#{$prefix}-col{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/********** Extra small screen************/ 
+
+.#{$prefix}-col-xs-6{
+    @include media(xs){
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+
+/*************Medium screen***********/ 
+.#{$prefix}-col-md-4{
+    @include media(md){
+        flex: 0 0 33.33%;
+        max-width: 33.33%
+    }
+}
+
+
+//large screen
+.ipc-col-lg-3{
+    @include media(lg){
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}

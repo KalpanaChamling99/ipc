@@ -1,0 +1,43 @@
+.#{$prefix}-btn-style-1{
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 30px;
+    border-radius: 25px;
+    font-size: 18px;
+    background: -webkit-linear-gradient(left, #193775, #00abc9);
+    color: $color_white;
+    &:visited{
+        color: $color_white;
+    }
+
+    &:hover{
+        color: $color_white;
+        background: -webkit-linear-gradient(left,  #00abc9,#193775);
+    }
+    i{
+        display: inline-block;
+        padding-left: 10px;
+    }
+}
+.#{$prefix}-btn-style-2{
+    display: inline-block;
+    position: relative;
+    padding: 0 10px 5px;
+    color: $color_primary;
+    font-weight: $font_semi_bold;
+    &:after{
+        content: '';
+        display: inline-block;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: -webkit-linear-gradient(left, #193775, #00abc9);
+    }
+    i{
+        display: inline-block;
+        padding-left: 10px;
+    }
+}
