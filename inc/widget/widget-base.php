@@ -275,7 +275,7 @@ class Ipc_Widget_Base extends WP_Widget {
 						<span class="field-label"><strong><?php echo esc_html( $field['label'] ); ?></strong></span>
 					</label>
 					<!-- <br /> -->
-					<input type="button" class="select-img button button-primary" value="<?php esc_attr_e( 'Upload', 'default-mag' ); ?>" data-uploader_title="<?php esc_attr_e( 'Select Image', 'default-mag' ); ?>" data-uploader_button_text="<?php esc_attr_e( 'Choose Image', 'default-mag' ); ?>" />
+					<input type="button" class="select-img button button-primary" value="<?php esc_attr_e( 'Upload', 'ipc' ); ?>" data-uploader_title="<?php esc_attr_e( 'Select Image', 'ipc' ); ?>" data-uploader_button_text="<?php esc_attr_e( 'Choose Image', 'ipc' ); ?>" />
 					<?php
 					$image_status = false;
 					if ( ! empty( $value ) ) {
@@ -286,7 +286,7 @@ class Ipc_Widget_Base extends WP_Widget {
 						$remove_button_style = 'display:inline-block;';
 					}
 					?>
-					<input type="button" value="<?php echo esc_attr_x( 'X', 'Remove', 'default-mag' ); ?>" class="button button-secondary btn-image-remove" style="<?php echo esc_attr( $remove_button_style ); ?>" />
+					<input type="button" value="<?php echo esc_attr_x( 'X', 'Remove', 'ipc' ); ?>" class="button button-secondary btn-image-remove" style="<?php echo esc_attr( $remove_button_style ); ?>" />
 					<input type="hidden" class="img" name="<?php echo esc_attr( $this->get_field_name( $key ) ); ?>" id="<?php echo esc_attr( $this->get_field_id( $key ) ); ?>" value="<?php echo esc_attr( $value ); ?>" />
 					<div class="image-preview-wrap">
 					<?php if ( ! empty( $value ) ) : ?>
